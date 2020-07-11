@@ -26,3 +26,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
     kubectl apply -f Manifests/myservicefile.yml  #Will start a load balancer service which will work on the deployed pods/containers
     minikube service react-frontend-lb created #will generate a temp server to run the loadbalancer. Should show the page at work.
     ```
+5) To undo everything:
+    ```
+    kubectl get all
+    kubectl delete [servicename] [deployname]
+    minikube stop
+    docker system prune -a
+    ```
