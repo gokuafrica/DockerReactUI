@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod                                            # 1
+metadata:
+  name: react-frontend2                                  # 2
+  labels:
+    app: sa-frontend
+spec:                                                # 3
+  containers:
+    - image: reactapp
+      imagePullPolicy: Never
+      name: my-reactapp                              # 5
+      ports:
+        - containerPort: 80                          # 6
